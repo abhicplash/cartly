@@ -53,26 +53,58 @@ const ProductDetails = () => {
   if (loading) return <h2>loading</h2>;
   return (
     <Layout>
-      <h1>{debounceText}</h1>
+      <div className="products-page">
+        <div className="products-banner">
+          <div className="product-banner-content">
+            <h2>Discover Our Latest Collection</h2>
+            <p className="banner-text">
+              Trendy products for your lifestyle – Shop now!
+            </p>
+          </div>
+        </div>
+        {/* <div className="products-banner">
+          <p>
+            🔥 Free shipping on orders over $50! Explore our latest collection
+            now.
+          </p>
+        </div> */}
+        <div className="products-header">
+          <h1>All Products</h1>
 
-      <input type="text" value={search} onChange={handleSearch} />
-      <br />
-      <br />
-      <br />
-      <div className="product-wrapper">
-        {FilteredData.map((item) => (
-          <ProductCard
-            key={item.id}
-            title={item.title}
-            price={item.price}
-            description={item.description}
-            id={item.id}
-            image={item.image}
-            handleClick={handleClick}
-          />
-        ))}
+          <div className="search-box">
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={search}
+              onChange={handleSearch}
+            />
+          </div>
+        </div>
+
+        {/* <div className="products-count">
+      {FilteredData.length} products found
+    </div> */}
+
+        <div className="product-wrapper">
+          {FilteredData.map((item) => (
+            <ProductCard
+              key={item.id}
+              title={item.title}
+              price={item.price}
+              description={item.description}
+              id={item.id}
+              image={item.image}
+              handleClick={handleClick}
+            />
+          ))}
+        </div>
+
+        {FilteredData.length === 0 && (
+          <div className="no-products">
+            <h2>No products found</h2>
+          </div>
+        )}
       </div>
-      {FilteredData.length === 0 && <h1>Not Found</h1>}
     </Layout>
   );
 };

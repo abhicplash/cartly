@@ -1,0 +1,153 @@
+.cart-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* TITLE */
+
+.cart-title {
+  font-size: 34px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* GRID */
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* PRODUCT LIST */
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ITEM CARD */
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 14px;
+  background: white;
+  border: 1px solid #eee;
+  transition: 0.25s;
+}
+
+.cart-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* INFO */
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.item-info p {
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* QTY CONTROL */
+
+.qty-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.qty-box button {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* TOTAL */
+
+.item-total {
+  font-weight: 600;
+}
+
+/* SUMMARY */
+
+.cart-summary {
+  border: 1px solid #e2e2e2ad;
+  border-radius: 14px;
+  padding: 25px;
+  height: fit-content;
+  background-color: #fff;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  color: #555;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .cart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-summary {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item-total {
+    margin-top: 10px;
+  }
+}

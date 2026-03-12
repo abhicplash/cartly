@@ -4,9 +4,12 @@ import { FaBars, FaHeart, FaUser } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
 import Topbar from "../Topbar/Topbar";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const cartItems = useSelector((store) => store.cart.cartItems);
 
   return (
     <>
@@ -34,6 +37,11 @@ const Navbar = () => {
           <Link to="/cart">
             <button className="cart-btn">
               <FiShoppingBag />
+
+              {cartItems.length > 0 && (
+                <span className="cart-count">{cartItems.length}</span>
+              )}
+
               <span className="cart-text">Cart</span>
             </button>
           </Link>
