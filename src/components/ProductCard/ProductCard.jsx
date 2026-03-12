@@ -3,11 +3,12 @@ import "./ProductCard.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addTocart } from "../../redux/cartSlice";
 import { toggleWishlist } from "../../redux/wishlistSlice";
-// import { addToCart } from "../../redux/cartSlice";
 
 const ProductCard = ({ handleClick, title, id, description, image, price }) => {
   const dispatch = useDispatch();
   const cartItems = useSelector((store) => store.cart.cartItems);
+
+
 
   const handleAddToCart = (product) => {
     console.log("Product added:", product);
@@ -25,9 +26,10 @@ const ProductCard = ({ handleClick, title, id, description, image, price }) => {
         handleClick(id);
       }}
     >
+      
+
       <img src={image} alt={title} className="product-image" />
-      <h4 className="product-title">{title}</h4>
-      <p className="product-description">{description}</p>
+      <h4 className="product-title">{title.slice(0, 25)}</h4>
       <p className="product-price">${price}</p>
       <button
         className="add-to-cart"

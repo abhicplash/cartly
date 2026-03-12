@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import "./ProductDetails.css";
 import { Link, useNavigate } from "react-router-dom";
+import Layout from "../../components/Layout/Layout";
 
 const ProductDetails = () => {
   const [products, setProducts] = useState([]);
@@ -51,10 +52,13 @@ const ProductDetails = () => {
 
   if (loading) return <h2>loading</h2>;
   return (
-    <div>
+    <Layout>
       <h1>{debounceText}</h1>
 
       <input type="text" value={search} onChange={handleSearch} />
+      <br />
+      <br />
+      <br />
       <div className="product-wrapper">
         {FilteredData.map((item) => (
           <ProductCard
@@ -69,7 +73,7 @@ const ProductDetails = () => {
         ))}
       </div>
       {FilteredData.length === 0 && <h1>Not Found</h1>}
-    </div>
+    </Layout>
   );
 };
 
