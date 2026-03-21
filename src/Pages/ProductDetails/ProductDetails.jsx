@@ -25,7 +25,9 @@ const ProductDetails = () => {
   }, [search]);
 
   const getPrductsDetails = () => {
-    fetch("https://fakestoreapi.com/products")
+    fetch(
+      "https://pqzi7yszai.execute-api.us-east-1.amazonaws.com/prod/products",
+    )
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

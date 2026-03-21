@@ -1,0 +1,26 @@
+{
+  "CallerReference": "cartly-ecom-app-2026",
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "cartly-s3-origin",
+        "DomainName": "cartly-ecom-app.s3-website-us-east-1.amazonaws.com",
+        "CustomOriginConfig": {
+          "HTTPPort": 80,
+          "HTTPSPort": 443,
+          "OriginProtocolPolicy": "http-only"
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "cartly-s3-origin",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+    "Compress": true
+  },
+  "Comment": "Cartly Ecom App",
+  "Enabled": true,
+  "DefaultRootObject": "index.html"
+}
