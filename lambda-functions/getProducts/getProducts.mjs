@@ -13,7 +13,6 @@ export const handler = async (event) => {
     const products = response.Items.map((item) => {
       const product = unmarshall(item);
 
-      // Match Fake Store API structure exactly
       return {
         id: Number(product.productId),
         title: product.title,

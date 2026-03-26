@@ -10,10 +10,10 @@ const TrendingProducts = ({ handleClick }) => {
   }, []);
 
   const getTrendingProducts = async () => {
-    const res = await fetch("https://fakestoreapi.com/products");
+    const res = await fetch("https://qmp29i6f33.execute-api.us-east-1.amazonaws.com/prod/products");
     const data = await res.json();
 
-    // take first 4 products
+  
     setProducts(data.slice(0, 4));
   };
 

@@ -26,7 +26,7 @@ const ProductDetails = () => {
 
   const getPrductsDetails = () => {
     fetch(
-      "https://pqzi7yszai.execute-api.us-east-1.amazonaws.com/prod/products",
+      "https://qmp29i6f33.execute-api.us-east-1.amazonaws.com/prod/products",
     )
       .then((res) => res.json())
       .then((data) => {
