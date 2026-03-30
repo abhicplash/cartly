@@ -24,7 +24,11 @@
 
 @media (max-width: 900px) {
   .trending-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(2, 1fr); */
   }
 }
 

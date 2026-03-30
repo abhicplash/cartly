@@ -54,7 +54,7 @@ const ProductDetails = () => {
 
   if (loading) return <h2>loading</h2>;
   return (
-    <Layout>
+   
       <div className="products-page">
         <div className="products-banner">
           <div className="product-banner-content">
@@ -107,7 +107,7 @@ const ProductDetails = () => {
           </div>
         )}
       </div>
-    </Layout>
+ 
   );
 };
 

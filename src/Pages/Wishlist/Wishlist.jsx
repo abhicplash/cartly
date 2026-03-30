@@ -1,17 +1,3 @@
-// import React from "react";
-// import Layout from "../../components/Layout/Layout";
-// import { useSelector } from "react-redux";
-
-// const Wishlist = () => {
-//   const wishListItems = useSelector((state) => state.wishlist.wishList);
-//   return (
-//     <Layout>
-//       <div>{wishListItems.length}</div>
-//     </Layout>
-//   );
-// };
-
-// export default Wishlist;
 import React from "react";
 import Layout from "../../components/Layout/Layout";
 import { useSelector, useDispatch } from "react-redux";
@@ -24,7 +10,7 @@ const Wishlist = () => {
   const dispatch = useDispatch();
 
   return (
-    <Layout>
+    <>
       <div className="wishlist-container">
         <div className="wishlist-header">
           <h1>My Wishlist</h1>
@@ -69,7 +55,7 @@ const Wishlist = () => {
           </div>
         )}
       </div>
-    </Layout>
+    </>
   );
 };
 

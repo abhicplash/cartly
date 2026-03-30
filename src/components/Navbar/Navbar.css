@@ -111,7 +111,51 @@
   transform: translateY(-2px);
 }
 
-/* MOBILE */
+/* USER DROPDOWN */
+.user-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 170px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.dropdown-email {
+  font-size: 12px;
+  color: #757575;
+  padding: 4px 8px;
+  margin: 0 0 8px 0;
+  border-bottom: 1px solid #e6e6e6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 9px 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  color: #111111;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.dropdown-item:hover {
+  background: #f5f5f5;
+}
 
 @media (max-width: 768px) {
   .nav-links {

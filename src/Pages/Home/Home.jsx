@@ -8,12 +8,12 @@ import TrendingProducts from "../../components/TrendingProducts/TrendingProducts
 
 const Home = () => {
   return (
-    <Layout>
+    <>
       <HomeBanner />
       <Categories />
       <FeatureHighlights/>
       <TrendingProducts/>
-    </Layout>
+    </>
   );
 };
 
